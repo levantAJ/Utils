@@ -9,7 +9,7 @@
 import UIKit
 
 extension String {
-    func sizeWithFont(font: UIFont, forWidth width: CGFloat) -> CGSize {
+    public func sizeWithFont(font: UIFont, forWidth width: CGFloat) -> CGSize {
         let fString = self as NSString
         let maximumSize = CGSize(width: width, height: CGFloat(MAXFLOAT))
         let rect = fString.boundingRectWithSize(maximumSize,
