@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D845A8A1BD1469B00A5D8A7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D845A891BD1469B00A5D8A7 /* Error.swift */; };
+		3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D845A8B1BD1470800A5D8A7 /* Constants.swift */; };
+		3D845A8F1BD14C5800A5D8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D845A911BD14C5800A5D8A7 /* Localizable.strings */; };
 		3D94C0B61BD0086C00088691 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D94C0B51BD0086C00088691 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D94C0BD1BD0086C00088691 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D94C0B21BD0086C00088691 /* Utils.framework */; };
 		3D94C0C21BD0086C00088691 /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94C0C11BD0086C00088691 /* UtilsTests.swift */; };
@@ -24,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D845A891BD1469B00A5D8A7 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		3D845A8B1BD1470800A5D8A7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3D845A901BD14C5800A5D8A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3D845A921BD14C6400A5D8A7 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D94C0B21BD0086C00088691 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D94C0B51BD0086C00088691 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		3D94C0B71BD0086C00088691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +82,10 @@
 			children = (
 				3D94C0B51BD0086C00088691 /* Utils.h */,
 				3D94C0CC1BD0087F00088691 /* String.swift */,
+				3D845A891BD1469B00A5D8A7 /* Error.swift */,
+				3D845A8B1BD1470800A5D8A7 /* Constants.swift */,
 				3D94C0B71BD0086C00088691 /* Info.plist */,
+				3D845A911BD14C5800A5D8A7 /* Localizable.strings */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -163,6 +173,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				vi,
 			);
 			mainGroup = 3D94C0A81BD0086C00088691;
 			productRefGroup = 3D94C0B31BD0086C00088691 /* Products */;
@@ -180,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D845A8F1BD14C5800A5D8A7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D845A8A1BD1469B00A5D8A7 /* Error.swift in Sources */,
 				3D94C0CD1BD0087F00088691 /* String.swift in Sources */,
+				3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +232,18 @@
 			targetProxy = 3D94C0BE1BD0086C00088691 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D845A911BD14C5800A5D8A7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D845A901BD14C5800A5D8A7 /* en */,
+				3D845A921BD14C6400A5D8A7 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3D94C0C41BD0086C00088691 /* Debug */ = {
@@ -257,7 +283,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -299,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;

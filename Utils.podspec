@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.authors = { 'Le Tai' => 'sirlevantai@gmail.com' }
   s.source = {  :git => 'https://github.com/levantAJ/Utils.git', :tag => s.version}
   s.source_files = 'Utils/**/*.{h,swift}'
-  s.resources = "Utils/**/*.{xib}"
+  s.resources = "Utils/**/*.{xib,strings}"
   s.platform = :ios
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
