@@ -11,7 +11,8 @@ import UIKit
 extension UIButton {
     
     public func sizeToFitsTitleAndImage(horizontalPadding: CGFloat = 5) {
-        var width = 2*horizontalPadding
+        translatesAutoresizingMaskIntoConstraints = false
+        var width = 2 * horizontalPadding
         if let titleLabel = titleLabel {
             titleLabel.sizeToFit()
             width += titleLabel.frame.width
