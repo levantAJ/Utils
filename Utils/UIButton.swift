@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton {
     
-    public func sizeToFitsWithHorizontalPadding(horizontalPadding: CGFloat = 5) {
+    public func sizeToFitsWithHorizontalPadding(horizontalPadding: CGFloat = 7) {
         translatesAutoresizingMaskIntoConstraints = true
         var width = 2 * horizontalPadding
         if let titleLabel = titleLabel {
