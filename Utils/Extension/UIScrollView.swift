@@ -9,14 +9,12 @@
 import UIKit
 
 extension UIScrollView {
-    func scrollToBottom(animated: Bool = true) {
-        func scrollToBottom() {
-            let bottomRect = CGRect(x: self.contentSize.width - 1, y: self.contentSize.height - 1, width: 1, height: 1)
-            self.scrollRectToVisible(bottomRect, animated: true)
-        }
-        
-        var isBouncing: Bool {
-            return contentOffset.y >= contentSize.height - bounds.size.height || contentOffset.y <= 0
-        }
+    public func scrollToBottom() {
+        let bottomRect = CGRect(x: self.contentSize.width - 1, y: self.contentSize.height - 1, width: 1, height: 1)
+        self.scrollRectToVisible(bottomRect, animated: true)
+    }
+    
+    public var isBouncing: Bool {
+        return contentOffset.y >= contentSize.height - bounds.size.height || contentOffset.y <= 0
     }
 }
