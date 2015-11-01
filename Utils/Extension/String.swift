@@ -18,4 +18,16 @@ extension String {
             context: nil)
         return rect.size
     }
+    
+    public func validatePhoneNumber() -> Bool {
+        let regexString = "[0]{1}([9]{1}[0-9]{8}|[1]{1}[0-9]{9})"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", argumentArray: [regexString])
+        return predicate.evaluateWithObject(self)
+    }
+    
+    public func validateEmail(testStr:String) -> Bool {
+        let emailRegEx = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluateWithObject(testStr)
+    }
 }
