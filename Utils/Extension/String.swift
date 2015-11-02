@@ -50,4 +50,8 @@ extension String {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluateWithObject(self)
     }
+    
+    public func isEmptyOrContainsOnlySpaces() -> Bool {
+        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).characters.count == 0
+    }
 }
