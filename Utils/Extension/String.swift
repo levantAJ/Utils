@@ -39,7 +39,7 @@ extension String {
         return rect.size
     }
     
-    public func validatePhoneNumber() -> Bool {
+    public func validateVietnamesePhoneNumber() -> Bool {
         let regexString = "[0]{1}([9]{1}[0-9]{8}|[1]{1}[0-9]{9})"
         let predicate = NSPredicate(format: "SELF MATCHES %@", argumentArray: [regexString])
         return predicate.evaluateWithObject(self)
