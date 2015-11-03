@@ -9,7 +9,7 @@
 import UIKit
 
 public class Utils {
-    public var deviceLowerThanOrEqualIPhone4: Bool {
+    public static var deviceLowerThanOrEqualIPhone4: Bool {
         guard UIDevice.currentDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().bounds.size.height < 568 else {
             return false
         }
