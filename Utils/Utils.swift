@@ -15,4 +15,11 @@ public class Utils {
         }
         return true
     }
+    
+    public static var deviceLowerThanOrEqualIPhone5s: Bool {
+        guard UIDevice.currentDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().bounds.size.height <= 568 else {
+            return false
+        }
+        return true
+    }
 }
