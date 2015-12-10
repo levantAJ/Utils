@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AA91BE8F37200577082 /* OrderedDictionary.swift */; settings = {ASSET_TAGS = (); }; };
-		3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AAD1BE90E2C00577082 /* Utils.swift */; settings = {ASSET_TAGS = (); }; };
-		3D7E79471BE3CA2700831231 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79451BE3CA2700831231 /* String.swift */; settings = {ASSET_TAGS = (); }; };
-		3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79461BE3CA2700831231 /* UIButton.swift */; settings = {ASSET_TAGS = (); }; };
-		3D7E794A1BE3CA3D00831231 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79491BE3CA3D00831231 /* UIScrollView.swift */; settings = {ASSET_TAGS = (); }; };
-		3D845A8A1BD1469B00A5D8A7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D845A891BD1469B00A5D8A7 /* Error.swift */; };
+		3D072F501C188A9E00B47749 /* CLLocationCoordinate2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F4E1C188A9E00B47749 /* CLLocationCoordinate2D.swift */; };
+		3D072F511C188A9E00B47749 /* MKMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F4F1C188A9E00B47749 /* MKMapView.swift */; };
+		3D072F5B1C18931000B47749 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F5A1C18931000B47749 /* Dictionary.swift */; };
+		3D072F5D1C18940A00B47749 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F5C1C18940A00B47749 /* UIFont.swift */; };
+		3D072F5F1C1894E300B47749 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F5E1C1894E300B47749 /* UISearchBar.swift */; };
+		3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AA91BE8F37200577082 /* OrderedDictionary.swift */; };
+		3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AAD1BE90E2C00577082 /* Utils.swift */; };
+		3D7E79471BE3CA2700831231 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79451BE3CA2700831231 /* String.swift */; };
+		3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79461BE3CA2700831231 /* UIButton.swift */; };
+		3D7E794A1BE3CA3D00831231 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79491BE3CA3D00831231 /* UIScrollView.swift */; };
 		3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D845A8B1BD1470800A5D8A7 /* Constants.swift */; };
-		3D845A8F1BD14C5800A5D8A7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D845A911BD14C5800A5D8A7 /* Localizable.strings */; };
 		3D94C0B61BD0086C00088691 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D94C0B51BD0086C00088691 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D94C0BD1BD0086C00088691 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D94C0B21BD0086C00088691 /* Utils.framework */; };
 		3D94C0C21BD0086C00088691 /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94C0C11BD0086C00088691 /* UtilsTests.swift */; };
-		3DCB79A01BE5B66B0065CCB4 /* NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */; settings = {ASSET_TAGS = (); }; };
+		3DCB79A01BE5B66B0065CCB4 /* NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */; };
+		3DD0AC891C15C22D000CB1BD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD0AC881C15C22D000CB1BD /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,15 +36,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D072F4E1C188A9E00B47749 /* CLLocationCoordinate2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationCoordinate2D.swift; sourceTree = "<group>"; };
+		3D072F4F1C188A9E00B47749 /* MKMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapView.swift; sourceTree = "<group>"; };
+		3D072F5A1C18931000B47749 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		3D072F5C1C18940A00B47749 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		3D072F5E1C1894E300B47749 /* UISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		3D542AA91BE8F37200577082 /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 		3D542AAD1BE90E2C00577082 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3D7E79451BE3CA2700831231 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3D7E79461BE3CA2700831231 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3D7E79491BE3CA3D00831231 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
-		3D845A891BD1469B00A5D8A7 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		3D845A8B1BD1470800A5D8A7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		3D845A901BD14C5800A5D8A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		3D845A921BD14C6400A5D8A7 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3D94C0B21BD0086C00088691 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D94C0B51BD0086C00088691 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		3D94C0B71BD0086C00088691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +54,7 @@
 		3D94C0C11BD0086C00088691 /* UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTests.swift; sourceTree = "<group>"; };
 		3D94C0C31BD0086C00088691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotification.swift; sourceTree = "<group>"; };
+		3DD0AC881C15C22D000CB1BD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +91,12 @@
 				3D7E79451BE3CA2700831231 /* String.swift */,
 				3D7E79461BE3CA2700831231 /* UIButton.swift */,
 				3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */,
+				3DD0AC881C15C22D000CB1BD /* UIView.swift */,
+				3D072F4E1C188A9E00B47749 /* CLLocationCoordinate2D.swift */,
+				3D072F4F1C188A9E00B47749 /* MKMapView.swift */,
+				3D072F5A1C18931000B47749 /* Dictionary.swift */,
+				3D072F5C1C18940A00B47749 /* UIFont.swift */,
+				3D072F5E1C1894E300B47749 /* UISearchBar.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -113,9 +126,7 @@
 				3D7E79441BE3CA2700831231 /* Extension */,
 				3D94C0B51BD0086C00088691 /* Utils.h */,
 				3D542AAD1BE90E2C00577082 /* Utils.swift */,
-				3D845A891BD1469B00A5D8A7 /* Error.swift */,
 				3D845A8B1BD1470800A5D8A7 /* Constants.swift */,
-				3D845A911BD14C5800A5D8A7 /* Localizable.strings */,
 				3D94C0B71BD0086C00088691 /* Info.plist */,
 			);
 			path = Utils;
@@ -222,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D845A8F1BD14C5800A5D8A7 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +250,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD0AC891C15C22D000CB1BD /* UIView.swift in Sources */,
 				3D7E794A1BE3CA3D00831231 /* UIScrollView.swift in Sources */,
+				3D072F501C188A9E00B47749 /* CLLocationCoordinate2D.swift in Sources */,
+				3D072F5F1C1894E300B47749 /* UISearchBar.swift in Sources */,
 				3DCB79A01BE5B66B0065CCB4 /* NSNotification.swift in Sources */,
+				3D072F5B1C18931000B47749 /* Dictionary.swift in Sources */,
 				3D7E79471BE3CA2700831231 /* String.swift in Sources */,
-				3D845A8A1BD1469B00A5D8A7 /* Error.swift in Sources */,
 				3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */,
 				3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */,
+				3D072F5D1C18940A00B47749 /* UIFont.swift in Sources */,
 				3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */,
 				3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */,
+				3D072F511C188A9E00B47749 /* MKMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,18 +283,6 @@
 			targetProxy = 3D94C0BE1BD0086C00088691 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3D845A911BD14C5800A5D8A7 /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D845A901BD14C5800A5D8A7 /* en */,
-				3D845A921BD14C6400A5D8A7 /* vi */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3D94C0C41BD0086C00088691 /* Debug */ = {
@@ -382,6 +385,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Utils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AJ.Utils;
@@ -401,6 +405,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Utils/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AJ.Utils;

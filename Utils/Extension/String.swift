@@ -54,4 +54,19 @@ extension String {
     public func isEmptyOrContainsOnlySpaces() -> Bool {
         return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).characters.count == 0
     }
+    
+    public func tryParseInt() -> Bool {
+        if Int(self) != nil {
+            return true
+        }
+        return false
+    }
+    
+    public func removeUnicode() -> String {
+        var standard = stringByReplacingOccurrencesOfString("đ", withString: "d")
+        standard = standard.stringByReplacingOccurrencesOfString("Đ", withString: "d")
+        let decode = standard.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+        standard = NSString(data: decode!, encoding: NSASCIIStringEncoding) as! String
+        return standard.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+    }
 }

@@ -8,4 +8,4 @@
 
 import UIKit
 
-struct Constants {}
+public struct Constants {}

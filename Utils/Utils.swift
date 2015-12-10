@@ -22,4 +22,27 @@ public class Utils {
         }
         return true
     }
+    
+    public class func dataFromStringsArray(strings: [String]) -> NSData {
+        return NSKeyedArchiver.archivedDataWithRootObject(strings)
+    }
+    
+    public class func stringsArrayFromData(data: NSData) -> [String]? {
+        guard let strings = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [String] else { return nil }
+        return strings
+    }
+    
+    public class func viewController(screenName: String, storyboardName: String, bundle: NSBundle? = nil) -> UIViewController? {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: bundle)
+        return storyboard.instantiateViewControllerWithIdentifier(screenName)
+    }
+    
+    public class func statusBarHeight() -> CGFloat {
+        return UIApplication.sharedApplication().statusBarFrame.height
+    }
+    
+    public class func appName() -> String {
+        guard let appName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as? String else { return "" }
+        return appName
+    }
 }
