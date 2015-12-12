@@ -17,6 +17,11 @@ public extension UIView {
         layer.cornerRadius = radius
         clipsToBounds = true
     }
+    
+    public func addBorder(borderWidth: CGFloat = 0.5, borderColor: UIColor = UIColor.grayColor()) {
+        layer.borderColor = borderColor.CGColor
+        layer.borderWidth = borderWidth
+    }
         
     public func roundCorners(top: Bool = true,
         bottom: Bool = true,
@@ -91,5 +96,13 @@ public extension UIView {
     
     public func makeCircle() {
         addRadius(frame.width/2)
+    }
+    
+    public class func identifier() -> String {
+        return self.description().componentsSeparatedByString(".").last!
+    }
+    
+    public class func nib() -> UINib {
+        return UINib(nibName: identifier(), bundle: nil)
     }
 }

@@ -6,6 +6,4 @@
 //  Copyright © 2015 AJ. All rights reserved.
 //
 
-import UIKit
-
 public struct Constants {}

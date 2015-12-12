@@ -45,4 +45,8 @@ public class Utils {
         guard let appName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleDisplayName") as? String else { return "" }
         return appName
     }
+    
+    public class func screenSize() -> CGSize {
+        return UIScreen.mainScreen().bounds.size
+    }
 }
