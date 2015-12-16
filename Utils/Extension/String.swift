@@ -69,4 +69,15 @@ extension String {
         standard = NSString(data: decode!, encoding: NSASCIIStringEncoding) as! String
         return standard.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
     }
+    
+    public func toJSON() -> AnyObject? {
+        let data = self.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        guard let jsonData = data else { return nil }
+        do {
+            let jsonResult = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
+            return jsonResult
+        } catch {
+            return nil
+        }
+    }
 }

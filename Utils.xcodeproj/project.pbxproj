@@ -12,6 +12,8 @@
 		3D072F5B1C18931000B47749 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F5A1C18931000B47749 /* Dictionary.swift */; };
 		3D072F5D1C18940A00B47749 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F5C1C18940A00B47749 /* UIFont.swift */; };
 		3D072F5F1C1894E300B47749 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D072F5E1C1894E300B47749 /* UISearchBar.swift */; };
+		3D2F1B3B1C21A4E500811B1A /* MKPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1B3A1C21A4E500811B1A /* MKPolyline.swift */; };
+		3D2F1B3D1C21A53100811B1A /* MKMapSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */; };
 		3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AA91BE8F37200577082 /* OrderedDictionary.swift */; };
 		3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AAD1BE90E2C00577082 /* Utils.swift */; };
 		3D7E79471BE3CA2700831231 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79451BE3CA2700831231 /* String.swift */; };
@@ -42,6 +44,8 @@
 		3D072F5A1C18931000B47749 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		3D072F5C1C18940A00B47749 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		3D072F5E1C1894E300B47749 /* UISearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		3D2F1B3A1C21A4E500811B1A /* MKPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKPolyline.swift; sourceTree = "<group>"; };
+		3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapSnapshotter.swift; sourceTree = "<group>"; };
 		3D542AA91BE8F37200577082 /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 		3D542AAD1BE90E2C00577082 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		3D7E79451BE3CA2700831231 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				3D072F5C1C18940A00B47749 /* UIFont.swift */,
 				3D072F5E1C1894E300B47749 /* UISearchBar.swift */,
 				3DAA88D31C1BD7F20003E2C5 /* UIViewController.swift */,
+				3D2F1B3A1C21A4E500811B1A /* MKPolyline.swift */,
+				3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -255,6 +261,7 @@
 			files = (
 				3DAA88D41C1BD7F20003E2C5 /* UIViewController.swift in Sources */,
 				3DD0AC891C15C22D000CB1BD /* UIView.swift in Sources */,
+				3D2F1B3D1C21A53100811B1A /* MKMapSnapshotter.swift in Sources */,
 				3D7E794A1BE3CA3D00831231 /* UIScrollView.swift in Sources */,
 				3D072F501C188A9E00B47749 /* CLLocationCoordinate2D.swift in Sources */,
 				3D072F5F1C1894E300B47749 /* UISearchBar.swift in Sources */,
@@ -264,6 +271,7 @@
 				3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */,
 				3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */,
 				3D072F5D1C18940A00B47749 /* UIFont.swift in Sources */,
+				3D2F1B3B1C21A4E500811B1A /* MKPolyline.swift in Sources */,
 				3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */,
 				3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */,
 				3D072F511C188A9E00B47749 /* MKMapView.swift in Sources */,

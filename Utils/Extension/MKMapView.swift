@@ -15,6 +15,10 @@ public extension MKMapView {
         region.span = MKCoordinateSpanMake(0.01, 0.01);
         setRegion(region, animated: true)
     }
+    
+    public func removeAllAnnotations() {
+        removeAnnotations(annotations)
+    }
 }
 
 
