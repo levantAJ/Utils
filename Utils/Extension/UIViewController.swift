@@ -18,4 +18,14 @@ public extension UIViewController {
         presentViewController(alertVC, animated: true, completion: nil)
     }
     
+    public func showConfirmAlert(title: String, message: String, actionTitle: String = "OK", confirmAction: () -> Void, cancelAction: (() -> Void)?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .Cancel, handler: { (action) -> Void in
+            cancelAction?()
+        }))
+        alertController.addAction(UIAlertAction(title: actionTitle, style: .Destructive, handler: { (action) -> Void in
+            confirmAction()
+        }))
+        presentViewController(alertController, animated: true, completion: nil)
+    }
 }
