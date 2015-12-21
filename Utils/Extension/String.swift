@@ -80,4 +80,18 @@ extension String {
             return nil
         }
     }
+    
+    public static func formatWithThousandSeparator(number: Double) -> String {
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.formatterBehavior = .Behavior10_4
+        numberFormatter.numberStyle = .DecimalStyle
+        return numberFormatter.stringFromNumber(number)!
+    }
+    
+    public static func formatWithThousandSeparator(number: Int) -> String {
+        let numberFormatter = NSNumberFormatter()
+        numberFormatter.formatterBehavior = .Behavior10_4
+        numberFormatter.numberStyle = .DecimalStyle
+        return numberFormatter.stringFromNumber(number)!
+    }
 }

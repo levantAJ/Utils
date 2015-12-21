@@ -10,11 +10,13 @@ import UIKit
 
 public extension UIViewController {
     
-    public func showAlert(title title: String, message: String) {
+    public func showAlert(title title: String, message: String, action: (() -> Void)? = nil) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         alertVC.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"),
             style: UIAlertActionStyle.Default,
-            handler: { (alertAction) -> Void in }))
+            handler: { (alertAction) -> Void in
+                action?()
+        }))
         presentViewController(alertVC, animated: true, completion: nil)
     }
     
