@@ -49,4 +49,15 @@ public class Utils {
     public class func screenSize() -> CGSize {
         return UIScreen.mainScreen().bounds.size
     }
+    
+    public class func removeItemAtPathIfExists(path: String) throws {
+        let fileManager = NSFileManager.defaultManager()
+        if fileManager.fileExistsAtPath(path) {
+            do {
+                try fileManager.removeItemAtPath(path)
+            } catch let error {
+                print(error as NSError)
+            }
+        }
+    }
 }
