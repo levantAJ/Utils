@@ -20,6 +20,7 @@
 		3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79461BE3CA2700831231 /* UIButton.swift */; };
 		3D7E794A1BE3CA3D00831231 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79491BE3CA3D00831231 /* UIScrollView.swift */; };
 		3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D845A8B1BD1470800A5D8A7 /* Constants.swift */; };
+		3D8803C31C3418C000118950 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8803C21C3418C000118950 /* Errors.swift */; };
 		3D94C0B61BD0086C00088691 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D94C0B51BD0086C00088691 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D94C0BD1BD0086C00088691 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D94C0B21BD0086C00088691 /* Utils.framework */; };
 		3D94C0C21BD0086C00088691 /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94C0C11BD0086C00088691 /* UtilsTests.swift */; };
@@ -52,6 +53,7 @@
 		3D7E79461BE3CA2700831231 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3D7E79491BE3CA3D00831231 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		3D845A8B1BD1470800A5D8A7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3D8803C21C3418C000118950 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		3D94C0B21BD0086C00088691 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D94C0B51BD0086C00088691 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		3D94C0B71BD0086C00088691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				3D94C0B51BD0086C00088691 /* Utils.h */,
 				3D542AAD1BE90E2C00577082 /* Utils.swift */,
 				3D845A8B1BD1470800A5D8A7 /* Constants.swift */,
+				3D8803C21C3418C000118950 /* Errors.swift */,
 				3D94C0B71BD0086C00088691 /* Info.plist */,
 			);
 			path = Utils;
@@ -272,6 +275,7 @@
 				3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */,
 				3D072F5D1C18940A00B47749 /* UIFont.swift in Sources */,
 				3D2F1B3B1C21A4E500811B1A /* MKPolyline.swift in Sources */,
+				3D8803C31C3418C000118950 /* Errors.swift in Sources */,
 				3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */,
 				3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */,
 				3D072F511C188A9E00B47749 /* MKMapView.swift in Sources */,
