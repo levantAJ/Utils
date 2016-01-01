@@ -8,6 +8,8 @@
 
 import UIKit
 
+public typealias FailureClosure = (NSError?) -> ()
+
 public class Utils {
     public static var deviceLowerThanOrEqualIPhone4: Bool {
         guard UIDevice.currentDevice().userInterfaceIdiom == .Phone && UIScreen.mainScreen().bounds.size.height < 568 else {
@@ -59,5 +61,35 @@ public class Utils {
                 print(error as NSError)
             }
         }
+    }
+    
+    public class func addKeyboardObserver(observer: AnyObject, willShowSelector: Selector? = nil,
+        didShowSelector: Selector? = nil,
+        willHideSelector: Selector? = nil,
+        didHideSelector: Selector? = nil) {
+            if let didShowSelector = didShowSelector {
+                NSNotificationCenter.defaultCenter().addObserver(observer,
+                    selector: didShowSelector,
+                    name: UIKeyboardDidShowNotification,
+                    object: nil)
+            }
+            if let didHideSelector = didHideSelector {
+                NSNotificationCenter.defaultCenter().addObserver(observer,
+                    selector: didHideSelector,
+                    name: UIKeyboardDidHideNotification,
+                    object: nil)
+            }
+            if let willShowSelector = willShowSelector {
+                NSNotificationCenter.defaultCenter().addObserver(observer,
+                    selector: willShowSelector,
+                    name: UIKeyboardWillShowNotification,
+                    object: nil)
+            }
+            if let willHideSelector = willHideSelector {
+                NSNotificationCenter.defaultCenter().addObserver(observer,
+                    selector: willHideSelector,
+                    name: UIKeyboardWillHideNotification,
+                    object: nil)
+            }
     }
 }

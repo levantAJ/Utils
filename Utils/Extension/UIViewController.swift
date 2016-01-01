@@ -30,4 +30,14 @@ public extension UIViewController {
         }))
         presentViewController(alertController, animated: true, completion: nil)
     }
+    
+    public func tabBarHeight() -> CGFloat {
+        guard let height = tabBarController?.tabBar.frame.height else { return 0 }
+        return height
+    }
+    
+    public func navigationBarHeight() -> CGFloat {
+        guard let height = navigationController?.navigationBar.frame.height else { return 0 }
+        return height
+    }
 }
