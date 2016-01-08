@@ -18,6 +18,11 @@ public extension UIView {
         clipsToBounds = true
     }
     
+    public func addCircle() {
+        layer.cornerRadius = frame.width/2
+        clipsToBounds = true
+    }
+    
     public func addBorder(borderWidth: CGFloat = 0.5, borderColor: UIColor = UIColor.grayColor()) {
         layer.borderColor = borderColor.CGColor
         layer.borderWidth = borderWidth

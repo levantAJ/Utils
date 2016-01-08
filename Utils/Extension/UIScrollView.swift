@@ -14,6 +14,11 @@ extension UIScrollView {
         self.scrollRectToVisible(bottomRect, animated: true)
     }
     
+    public func scrollToTop() {
+        let topRect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        self.scrollRectToVisible(topRect, animated: true)
+    }
+    
     public var isBouncing: Bool {
         return contentOffset.y >= contentSize.height - bounds.size.height || contentOffset.y <= 0
     }
