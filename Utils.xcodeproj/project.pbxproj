@@ -27,6 +27,7 @@
 		3DAA88D41C1BD7F20003E2C5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAA88D31C1BD7F20003E2C5 /* UIViewController.swift */; };
 		3DCB79A01BE5B66B0065CCB4 /* NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */; };
 		3DD0AC891C15C22D000CB1BD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD0AC881C15C22D000CB1BD /* UIView.swift */; };
+		3DFBB68D1C40CD8D0048BFA5 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFBB68C1C40CD8D0048BFA5 /* UIApplication.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		3DAA88D31C1BD7F20003E2C5 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotification.swift; sourceTree = "<group>"; };
 		3DD0AC881C15C22D000CB1BD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		3DFBB68C1C40CD8D0048BFA5 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				3DAA88D31C1BD7F20003E2C5 /* UIViewController.swift */,
 				3D2F1B3A1C21A4E500811B1A /* MKPolyline.swift */,
 				3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */,
+				3DFBB68C1C40CD8D0048BFA5 /* UIApplication.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFBB68D1C40CD8D0048BFA5 /* UIApplication.swift in Sources */,
 				3DAA88D41C1BD7F20003E2C5 /* UIViewController.swift in Sources */,
 				3DD0AC891C15C22D000CB1BD /* UIView.swift in Sources */,
 				3D2F1B3D1C21A53100811B1A /* MKMapSnapshotter.swift in Sources */,

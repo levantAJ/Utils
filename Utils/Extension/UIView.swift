@@ -104,10 +104,10 @@ public extension UIView {
     }
     
     public class func identifier() -> String {
-        return self.description().componentsSeparatedByString(".").last!
+        return description().componentsSeparatedByString(".").last!
     }
     
-    public class func nib() -> UINib {
-        return UINib(nibName: identifier(), bundle: nil)
+    public class func nib(bundle: NSBundle? = nil) -> UINib {
+        return UINib(nibName: identifier(), bundle: bundle)
     }
 }

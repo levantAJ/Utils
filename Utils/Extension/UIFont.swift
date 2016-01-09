@@ -13,7 +13,7 @@ public extension UIFont {
         if #available(iOS 8.2, *) {
             return UIFont.systemFontOfSize(size, weight: UIFontWeightMedium)
         } else {
-            return UIFont(name: "HelveticaNeue-Medium", size: size)
+            return UIFont.systemFontOfSize(size)
         }
     }
     
@@ -21,7 +21,7 @@ public extension UIFont {
         if #available(iOS 8.2, *) {
             return UIFont.systemFontOfSize(size, weight: UIFontWeightRegular)
         } else {
-            return UIFont(name: "HelveticaNeue-Regular", size: size)
+            return UIFont.systemFontOfSize(size)
         }
     }
     
@@ -29,7 +29,7 @@ public extension UIFont {
         if #available(iOS 8.2, *) {
             return UIFont.systemFontOfSize(size, weight: UIFontWeightSemibold)
         } else {
-            return UIFont(name: "HelveticaNeue-Semibold", size: size)
+            return UIFont.systemFontOfSize(size)
         }
     }
 }
