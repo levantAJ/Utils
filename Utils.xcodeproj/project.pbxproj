@@ -25,6 +25,7 @@
 		3D94C0BD1BD0086C00088691 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D94C0B21BD0086C00088691 /* Utils.framework */; };
 		3D94C0C21BD0086C00088691 /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D94C0C11BD0086C00088691 /* UtilsTests.swift */; };
 		3D997DFD1C455DA500D5E9B6 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D997DFC1C455DA500D5E9B6 /* UIImage.swift */; };
+		3DA99CC91C52857D004F93E3 /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA99CC81C52857D004F93E3 /* NSDate.swift */; };
 		3DAA88D41C1BD7F20003E2C5 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAA88D31C1BD7F20003E2C5 /* UIViewController.swift */; };
 		3DCB79A01BE5B66B0065CCB4 /* NSNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */; };
 		3DD0AC891C15C22D000CB1BD /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD0AC881C15C22D000CB1BD /* UIView.swift */; };
@@ -63,6 +64,7 @@
 		3D94C0C11BD0086C00088691 /* UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTests.swift; sourceTree = "<group>"; };
 		3D94C0C31BD0086C00088691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D997DFC1C455DA500D5E9B6 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		3DA99CC81C52857D004F93E3 /* NSDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 		3DAA88D31C1BD7F20003E2C5 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		3DCB799F1BE5B66B0065CCB4 /* NSNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNotification.swift; sourceTree = "<group>"; };
 		3DD0AC881C15C22D000CB1BD /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */,
 				3DFBB68C1C40CD8D0048BFA5 /* UIApplication.swift */,
 				3D997DFC1C455DA500D5E9B6 /* UIImage.swift */,
+				3DA99CC81C52857D004F93E3 /* NSDate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */,
 				3D072F5D1C18940A00B47749 /* UIFont.swift in Sources */,
 				3D2F1B3B1C21A4E500811B1A /* MKPolyline.swift in Sources */,
+				3DA99CC91C52857D004F93E3 /* NSDate.swift in Sources */,
 				3D8803C31C3418C000118950 /* Errors.swift in Sources */,
 				3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */,
 				3D997DFD1C455DA500D5E9B6 /* UIImage.swift in Sources */,

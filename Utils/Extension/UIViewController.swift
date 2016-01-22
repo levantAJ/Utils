@@ -31,6 +31,43 @@ public extension UIViewController {
         presentViewController(alertController, animated: true, completion: nil)
     }
     
+    public func showDateTimePicker(title: String,
+        message: String,
+        date: NSDate,
+        datePickerMode: UIDatePickerMode = UIDatePickerMode.DateAndTime,
+        disablePrivousDate: Bool = true,
+        disableFutureDate: Bool = false,
+        selectedButtonTitle: String? = nil,
+        commpletion: (NSDate) -> Void) {
+            let alertController = UIAlertController(title: title,
+                message: message + "\n\n\n\n\n\n\n\n\n\n\n",
+                preferredStyle: .ActionSheet)
+            
+            let dateTimePicker = UIDatePicker(frame: CGRect(x: 10, y: 50, width: view.bounds.width - 50, height: 200))
+            alertController.view.addSubview(dateTimePicker)
+            dateTimePicker.date = date
+            dateTimePicker.datePickerMode = datePickerMode
+            if disablePrivousDate {
+                dateTimePicker.minimumDate = NSDate()
+            }
+            if disableFutureDate {
+                dateTimePicker.maximumDate = NSDate()
+            }
+            dateTimePicker.center = CGPoint(x: alertController.view.bounds.width/2,
+                y: dateTimePicker.center.y)
+            if let selectedButtonTitle = selectedButtonTitle {
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertActionStyle.Cancel, handler: { (cancelAction) -> Void in }))
+                alertController.addAction(UIAlertAction(title: selectedButtonTitle, style: UIAlertActionStyle.Default, handler: { (cancelAction) -> Void in
+                    commpletion(dateTimePicker.date)
+                }))
+            } else {
+                alertController.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertActionStyle.Cancel, handler: { (cancelAction) -> Void in
+                    commpletion(dateTimePicker.date)
+                }))
+            }
+            presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     public func tabBarHeight() -> CGFloat {
         guard let height = tabBarController?.tabBar.frame.height else { return 0 }
         return height
