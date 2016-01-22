@@ -12,7 +12,7 @@ public extension UIViewController {
     
     public func showAlert(title title: String, message: String, action: (() -> Void)? = nil) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alertVC.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"),
+        alertVC.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""),
             style: UIAlertActionStyle.Default,
             handler: { (alertAction) -> Void in
                 action?()
@@ -20,9 +20,15 @@ public extension UIViewController {
         presentViewController(alertVC, animated: true, completion: nil)
     }
     
-    public func showConfirmAlert(title: String, message: String, actionTitle: String = "OK", confirmAction: () -> Void, cancelAction: (() -> Void)?) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
-        alertController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .Cancel, handler: { (action) -> Void in
+    public func showConfirmAlert(title: String,
+        message: String,
+        actionTitle: String = NSLocalizedString("OK", comment: ""),
+        cancelTitle: String = NSLocalizedString("Cancel", comment: ""),
+        type: UIAlertControllerStyle = .ActionSheet,
+        confirmAction: () -> Void,
+        cancelAction: (() -> Void)?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: type)
+        alertController.addAction(UIAlertAction(title: cancelTitle, style: .Cancel, handler: { (action) -> Void in
             cancelAction?()
         }))
         alertController.addAction(UIAlertAction(title: actionTitle, style: .Destructive, handler: { (action) -> Void in
