@@ -16,6 +16,7 @@
 		3D2F1B3D1C21A53100811B1A /* MKMapSnapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */; };
 		3D542AAA1BE8F37200577082 /* OrderedDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AA91BE8F37200577082 /* OrderedDictionary.swift */; };
 		3D542AAE1BE90E2C00577082 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D542AAD1BE90E2C00577082 /* Utils.swift */; };
+		3D561AAB1C54CD4E001A97D5 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D561AAA1C54CD4E001A97D5 /* Array.swift */; };
 		3D7E79471BE3CA2700831231 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79451BE3CA2700831231 /* String.swift */; };
 		3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79461BE3CA2700831231 /* UIButton.swift */; };
 		3D7E794A1BE3CA3D00831231 /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E79491BE3CA3D00831231 /* UIScrollView.swift */; };
@@ -52,6 +53,7 @@
 		3D2F1B3C1C21A53100811B1A /* MKMapSnapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapSnapshotter.swift; sourceTree = "<group>"; };
 		3D542AA91BE8F37200577082 /* OrderedDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedDictionary.swift; sourceTree = "<group>"; };
 		3D542AAD1BE90E2C00577082 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		3D561AAA1C54CD4E001A97D5 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		3D7E79451BE3CA2700831231 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3D7E79461BE3CA2700831231 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		3D7E79491BE3CA3D00831231 /* UIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				3DFBB68C1C40CD8D0048BFA5 /* UIApplication.swift */,
 				3D997DFC1C455DA500D5E9B6 /* UIImage.swift */,
 				3DA99CC81C52857D004F93E3 /* NSDate.swift */,
+				3D561AAA1C54CD4E001A97D5 /* Array.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				3D072F5F1C1894E300B47749 /* UISearchBar.swift in Sources */,
 				3DCB79A01BE5B66B0065CCB4 /* NSNotification.swift in Sources */,
 				3D072F5B1C18931000B47749 /* Dictionary.swift in Sources */,
+				3D561AAB1C54CD4E001A97D5 /* Array.swift in Sources */,
 				3D7E79471BE3CA2700831231 /* String.swift in Sources */,
 				3D845A8C1BD1470800A5D8A7 /* Constants.swift in Sources */,
 				3D7E79481BE3CA2700831231 /* UIButton.swift in Sources */,

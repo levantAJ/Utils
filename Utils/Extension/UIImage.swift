@@ -41,19 +41,11 @@ public extension UIImage {
     }
     
     public func imageToSize(size: CGSize) -> UIImage {
-//        UIGraphicsBeginImageContextWithOptions(sizeChange, false, scale)
-//        drawInRect(CGRect(origin: CGPointZero, size: sizeChange))
-//        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        return scaledImage
-        
-        let scale = size.width / size.width
-        let newHeight = size.height * scale
-        UIGraphicsBeginImageContext(CGSizeMake(size.width, newHeight))
-        drawInRect(CGRectMake(0, 0, size.width, newHeight))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        drawInRect(CGRect(origin: CGPointZero, size: size))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return newImage
+        return scaledImage
     }
     
     public class func imageFromColor(color: UIColor, size: CGSize) -> UIImage {

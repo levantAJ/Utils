@@ -19,6 +19,14 @@ public extension MKMapView {
     public func removeAllAnnotations() {
         removeAnnotations(annotations)
     }
+    
+    public func topLeftCoordinate() -> CLLocationCoordinate2D {
+        return convertPoint(CGPoint.zero, toCoordinateFromView: self)
+    }
+    
+    public func bottomRightCoordinate() -> CLLocationCoordinate2D {
+        return convertPoint(CGPoint(x: frame.width, y: frame.height), toCoordinateFromView: self)
+    }
 }
 
 
