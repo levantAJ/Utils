@@ -87,4 +87,23 @@ public extension UIViewController {
     public func statusBarHeight() -> CGFloat {
         return UIApplication.sharedApplication().statusBarFrame.height
     }
+    
+    public func showAlertChangeProfileAvatar(selectPhoto: () -> Void, takePhoto: () -> Void) {
+        let alertViewController = UIAlertController(title: NSLocalizedString("Change your avatar", comment: ""),
+            message: NSLocalizedString("Select your photo", comment: ""),
+            preferredStyle: .ActionSheet)
+        alertViewController.addAction(UIAlertAction(title: NSLocalizedString("Select a photo from library", comment: ""),
+            style: .Default, handler: { (selectAction) -> Void in
+                selectPhoto()
+        }))
+        alertViewController.addAction(UIAlertAction(title: NSLocalizedString("Capture a photo", comment: ""),
+            style: .Default, handler: { (captureAction) -> Void in
+                takePhoto()
+        }))
+        alertViewController.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""),
+            style: .Cancel, handler: { (captureAction) -> Void in
+                
+        }))
+        presentViewController(alertViewController, animated: true, completion: nil)
+    }
 }
