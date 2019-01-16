@@ -10,7 +10,7 @@ import UIKit
 
 extension NSNotification {
     public func sizeForKeyboard() -> CGSize {
-        let keyboardSize = userInfo![UIKeyboardFrameBeginUserInfoKey]!.CGRectValue.size
+        let keyboardSize = (userInfo![UIResponder.keyboardFrameBeginUserInfoKey]! as AnyObject).cgRectValue.size
         return CGSize(width: max(keyboardSize.height, keyboardSize.width), height: min(keyboardSize.height, keyboardSize.width))
     }
 }

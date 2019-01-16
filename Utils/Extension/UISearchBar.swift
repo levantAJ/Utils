@@ -10,7 +10,7 @@ import UIKit
 
 public extension UISearchBar {
     public func setTextColor(color: UIColor) {
-        let textFieldInsideSearchBar = self.valueForKey("searchField") as? UITextField
+        let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.textColor = color
     }
     
@@ -19,7 +19,7 @@ public extension UISearchBar {
             for subsubView in subView.subviews  {
                 if let textField = subsubView as? UITextField {
                     textField.attributedPlaceholder =  NSAttributedString(string:placeholder,
-                        attributes:[NSForegroundColorAttributeName: textColor])
+                                                                          attributes:[NSAttributedString.Key.foregroundColor: textColor])
                 }
             }
         }
@@ -30,23 +30,23 @@ public extension UISearchBar {
             for subsubView in subView.subviews  {
                 if let textField = subsubView as? UITextField {
                     textField.attributedPlaceholder =  NSAttributedString(string:self.placeholder!,
-                        attributes:[NSForegroundColorAttributeName: color])
+                                                                          attributes:[NSAttributedString.Key.foregroundColor: color])
                 }
             }
         }
     }
     
     public func setTextBackgroundColor(color: UIColor) {
-        let textFieldInsideSearchBar = self.valueForKey("searchField") as? UITextField
+        let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
         textFieldInsideSearchBar?.backgroundColor = color
     }
     
-    public func enableSearchBar(enabled enabled: Bool = true) {
+    public func enableSearchBar(enabled: Bool = true) {
         if let wrapperView = subviews.first {
             for view in wrapperView.subviews {
                 if let control = view as? UIControl {
-                    control.enabled = enabled
-                    control.userInteractionEnabled = true
+                    control.isEnabled = enabled
+                    control.isUserInteractionEnabled = true
                 }
             }
         }

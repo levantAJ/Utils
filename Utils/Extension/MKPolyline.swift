@@ -10,21 +10,21 @@ import MapKit
 
 public extension MKPolyline {
     public func getCoordinates() -> [CLLocationCoordinate2D] {
-        let coordsPointer = UnsafeMutablePointer<CLLocationCoordinate2D>.alloc(pointCount)
+        let coordsPointer = UnsafeMutablePointer<CLLocationCoordinate2D>.allocate(capacity: pointCount)
         getCoordinates(coordsPointer, range: NSMakeRange(0, pointCount))
         var coords: [CLLocationCoordinate2D] = []
         for i in 0..<pointCount {
             coords.append(coordsPointer[i])
         }
-        coordsPointer.dealloc(pointCount)
+        coordsPointer.deallocate()
         return coords
     }
     
     public func renderMapImage(mapImageSize: CGSize,
         startCoordinate: CLLocationCoordinate2D,
         endCoordinate: CLLocationCoordinate2D,
-        completion: (UIImage) -> Void) {
-            MKMapSnapshotter.takeSnapShotOfTargetSize(mapImageSize,
+        completion: @escaping (UIImage) -> Void) {
+        MKMapSnapshotter.takeSnapShotOfTargetSize(size: mapImageSize,
                 polyline: self,
                 startCoordinate: startCoordinate,
                 endCoordinate: endCoordinate,

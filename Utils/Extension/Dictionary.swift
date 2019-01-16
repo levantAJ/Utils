@@ -8,7 +8,7 @@
 
 public extension Dictionary {
     public func valueAtIndex(index: Int) -> AnyObject? {
-        for (idx, item) in self.enumerate() {
+        for (idx, item) in self.enumerated() {
             if index == idx {
                 return item.1 as? AnyObject
             }
@@ -17,7 +17,7 @@ public extension Dictionary {
     }
     
     public func keyAtIndex(index: Int) -> String? {
-        for (idx, item) in self.enumerate() {
+        for (idx, item) in self.enumerated() {
             if index == idx {
                 return item.0 as? String
             }

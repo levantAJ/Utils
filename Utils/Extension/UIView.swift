@@ -9,8 +9,8 @@
 import UIKit
 
 public extension UIView {
-    public class func loadFromNibNamed(nibNamed: String, bundle: NSBundle? = nil) -> UIView? {
-        return UINib(nibName: nibNamed, bundle: bundle).instantiateWithOwner(nil, options: nil)[0] as? UIView
+    public class func loadFromNibNamed(nibNamed: String, bundle: Bundle? = nil) -> UIView? {
+        return UINib(nibName: nibNamed, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
     }
     
     public func addRadius(radius: CGFloat = 5) {
@@ -23,8 +23,8 @@ public extension UIView {
         clipsToBounds = true
     }
     
-    public func addBorder(borderWidth: CGFloat = 0.5, borderColor: UIColor = UIColor.grayColor()) {
-        layer.borderColor = borderColor.CGColor
+    public func addBorder(borderWidth: CGFloat = 0.5, borderColor: UIColor = .gray) {
+        layer.borderColor = borderColor.cgColor
         layer.borderWidth = borderWidth
     }
         
@@ -34,34 +34,34 @@ public extension UIView {
         right: Bool = true,
         radius: CGFloat = 5) {
             let size = CGSize(width: radius, height: radius)
-            var path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .AllCorners, cornerRadii: size)
+        var path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: size)
             if top && bottom {
                 if left && right {
-                        path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .AllCorners, cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .allCorners, cornerRadii: size)
                 } else if left {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.TopLeft, .BottomLeft], cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft, .bottomLeft], cornerRadii: size)
                 } else if right {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.TopRight, .BottomRight], cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topRight, .bottomRight], cornerRadii: size)
                 }
             } else if top {
                 if left && right {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.TopLeft, .TopRight], cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: size)
                 } else if left {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .TopLeft, cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .topLeft, cornerRadii: size)
                 } else {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .TopRight, cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .topRight, cornerRadii: size)
                 }
             } else {
                 if left && right {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.BottomLeft, .BottomRight], cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: [.bottomLeft, .bottomRight], cornerRadii: size)
                 } else if left {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .BottomLeft, cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .bottomLeft, cornerRadii: size)
                 } else {
-                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .BottomRight, cornerRadii: size)
+                    path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: .bottomRight, cornerRadii: size)
                 }
             }
             let mask = CAShapeLayer()
-            mask.path = path.CGPath
+        mask.path = path.cgPath
             self.layer.mask = mask
     }
     
@@ -75,39 +75,39 @@ public extension UIView {
         self.layer.shadowOpacity = 0.0
     }
     
-    public class func dotView(size: CGFloat = 6, backgroundColor: UIColor = UIColor.lightGrayColor()) -> UIView {
+    public class func dotView(size: CGFloat = 6, backgroundColor: UIColor = .lightGray) -> UIView {
         let dotView = UIView(frame: CGRect(x: 0, y: 0, width: size, height: size))
         dotView.backgroundColor = backgroundColor
-        dotView.addRadius(size / 2)
+        dotView.addRadius(radius: size / 2)
         return dotView
     }
     
-    public func hideBorder(hidden hidden: Bool = true) {
+    public func hideBorder(hidden: Bool = true) {
         if hidden {
-            layer.borderColor = UIColor.clearColor().CGColor
+            layer.borderColor = UIColor.clear.cgColor
         } else {
-            layer.borderColor = UIColor.whiteColor().CGColor
+            layer.borderColor = UIColor.white.cgColor
         }
     }
     
     public func captureImage() -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.mainScreen().scale)
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        layer.renderInContext(context)
+        layer.render(in: context)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
     }
     
     public func makeCircle() {
-        addRadius(frame.width/2)
+        addRadius(radius: frame.width/2)
     }
     
     public class func identifier() -> String {
-        return description().componentsSeparatedByString(".").last!
+        return description().components(separatedBy: ".").last!
     }
     
-    public class func nib(bundle: NSBundle? = nil) -> UINib {
+    public class func nib(bundle: Bundle? = nil) -> UINib {
         return UINib(nibName: identifier(), bundle: bundle)
     }
 }

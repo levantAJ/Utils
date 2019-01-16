@@ -9,7 +9,8 @@
 import UIKit
 
 public extension Array {
-    public func takeElements(var elementCount: Int) -> Array {
+    public func takeElements(elementCount: Int) -> Array {
+        var elementCount = elementCount
         if (elementCount > count) {
             elementCount = count
         }

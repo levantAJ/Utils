@@ -8,22 +8,22 @@
 
 import UIKit
 
-public extension NSDate {
+public extension Date {
     public func toFullString() -> String {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm dd/MM/yyyy"
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
     
     public func toString(dateFormat: String = "dd/MM/yyyy") -> String {
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
-        return dateFormatter.stringFromDate(self)
+        return dateFormatter.string(from: self)
     }
     
-    public class func fromString(dateString: String, dateFormat: String = "dd/MM/yyyy") -> NSDate? {
-        let dateFormatter = NSDateFormatter()
+    public static func fromString(dateString: String, dateFormat: String = "dd/MM/yyyy") -> Date? {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
-        return dateFormatter.dateFromString(dateString)
+        return dateFormatter.date(from: dateString)
     }
 }

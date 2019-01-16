@@ -12,7 +12,7 @@ public extension MKMapView {
     public func gotoLocation(coordinate: CLLocationCoordinate2D) {
         var region = MKCoordinateRegion()
         region.center = coordinate;
-        region.span = MKCoordinateSpanMake(0.01, 0.01);
+        region.span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01);
         setRegion(region, animated: true)
     }
     
@@ -21,11 +21,11 @@ public extension MKMapView {
     }
     
     public func topLeftCoordinate() -> CLLocationCoordinate2D {
-        return convertPoint(CGPoint.zero, toCoordinateFromView: self)
+        return convert(CGPoint.zero, toCoordinateFrom: self)
     }
     
     public func bottomRightCoordinate() -> CLLocationCoordinate2D {
-        return convertPoint(CGPoint(x: frame.width, y: frame.height), toCoordinateFromView: self)
+        return convert(CGPoint(x: frame.width, y: frame.height), toCoordinateFrom: self)
     }
 }
 

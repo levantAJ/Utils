@@ -10,14 +10,15 @@ import UIKit
 
 public extension UIImage {
     public class func imageFromUrlString(urlString: String) -> UIImage? {
-        guard let url = NSURL(string: urlString), data = NSData(contentsOfURL: url) else { return nil }
+        guard let url = URL(string: urlString),
+            let data = try? Data(contentsOf: url) else { return nil }
         return UIImage(data: data)
     }
     
-    public class func imageFromUrlString(urlString: String, completion: (UIImage?) -> Void) {
-        dispatch_async(dispatch_queue_create(Constants.UIImage.QueueLabel, DISPATCH_QUEUE_CONCURRENT)) { () -> Void in
-            if let url = NSURL(string: urlString),
-                data = NSData(contentsOfURL: url) {
+    public class func imageFromUrlString(urlString: String, completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue(label: Constants.UIImage.QueueLabel, qos: .default, attributes: .concurrent).async {
+            if let url = URL(string: urlString),
+                let data = try? Data(contentsOf: url) {
                     completion(UIImage(data: data))
             } else {
                 completion(nil)
@@ -25,14 +26,15 @@ public extension UIImage {
         }
     }
     
-    public class func imageFromUrl(url: NSURL) -> UIImage? {
-        guard let data = NSData(contentsOfURL: url) else { return nil }
+    public class func imageFromUrl(url: URL) -> UIImage? {
+        guard let data = try? Data(contentsOf: url) else { return nil }
         return UIImage(data: data)
     }
     
-    public class func imageFromUrl(url: NSURL?, completion: (UIImage?) -> Void) {
-        dispatch_async(dispatch_queue_create(Constants.UIImage.QueueLabel, DISPATCH_QUEUE_CONCURRENT)) { () -> Void in
-            if let url = url, data = NSData(contentsOfURL: url) {
+    public class func imageFromUrl(url: URL?, completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue(label: Constants.UIImage.QueueLabel, qos: .default, attributes: .concurrent).async {
+            if let url = url,
+                let data = try? Data(contentsOf: url) {
                 completion(UIImage(data: data))
             } else {
                 completion(nil)
@@ -42,21 +44,21 @@ public extension UIImage {
     
     public func imageToSize(size: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        drawInRect(CGRect(origin: CGPointZero, size: size))
+        draw(in: CGRect(origin: .zero, size: size))
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return scaledImage
+        return scaledImage!
     }
     
     public class func imageFromColor(color: UIColor, size: CGSize) -> UIImage {
-        let rect = CGRectMake(0.0, 0.0, size.width, size.height)
+        let rect = CGRect(x: 0.0, y: 0.0, width: size.width, height: size.height)
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        context?.setFillColor(color.cgColor)
+        context?.fill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image!
     }
 }
 

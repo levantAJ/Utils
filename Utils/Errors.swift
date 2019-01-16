@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum FailedMessage: Int, ErrorType, CustomStringConvertible {
+public enum FailedMessage: Int, Error, CustomStringConvertible {
     case Failed
     case DeleteTripFailed
     case NoChangeWhenRepeatTrip
@@ -34,7 +34,7 @@ public enum FailedMessage: Int, ErrorType, CustomStringConvertible {
     }
 }
 
-public enum SuccessMessage: Int, ErrorType, CustomStringConvertible {
+public enum SuccessMessage: Int, Error, CustomStringConvertible {
     case Success
     case DeleteTripSuccess
     
@@ -54,7 +54,7 @@ public enum SuccessMessage: Int, ErrorType, CustomStringConvertible {
     }
 }
 
-public enum LoadingStatus: Int, ErrorType, CustomStringConvertible {
+public enum LoadingStatus: Int, Error, CustomStringConvertible {
     case Loading
     case UpdateProfile
     case MakeRequest
@@ -101,7 +101,7 @@ public enum LoadingStatus: Int, ErrorType, CustomStringConvertible {
     }
 }
 
-public enum AlertError: Int, ErrorType, CustomStringConvertible {
+public enum AlertError: Int, Error, CustomStringConvertible {
     case Location
     case Failure
     case CallFailure
@@ -124,7 +124,7 @@ public enum AlertError: Int, ErrorType, CustomStringConvertible {
     }
 }
 
-public enum AuthenticationError: Int, ErrorType, CustomStringConvertible {
+public enum AuthenticationError: Int, Error, CustomStringConvertible {
     case WrongPassword
     case WrongEmail
     case NotFound
@@ -148,7 +148,7 @@ public enum AuthenticationError: Int, ErrorType, CustomStringConvertible {
     }
 }
 
-public enum APIError: Int, ErrorType, CustomStringConvertible {
+public enum APIError: Int, Error, CustomStringConvertible {
     case Unspecified = 7000
     case NoBodyFound = 7001
     case Cached = 7002

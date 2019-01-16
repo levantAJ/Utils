@@ -8,12 +8,13 @@
 
 public extension UIApplication {
     public class func callPhoneNumber(phoneNumber: String) {
-        guard let phoneURL = NSURL(string: "telprompt://\(phoneNumber)") where sharedApplication().canOpenURL(phoneURL)  else { return }
-        sharedApplication().openURL(phoneURL)
+        guard let phoneURL = URL(string: "telprompt://\(phoneNumber)"),
+            shared.canOpenURL(phoneURL)  else { return }
+        shared.openURL(phoneURL)
     }
     
     public class func canCallPhoneNumber(phoneNumber: String) -> Bool {
-        guard let phoneURL = NSURL(string: "telprompt://\(phoneNumber)")  else { return false }
-        return sharedApplication().canOpenURL(phoneURL)
+        guard let phoneURL = URL(string: "telprompt://\(phoneNumber)")  else { return false }
+        return shared.canOpenURL(phoneURL)
     }
 }

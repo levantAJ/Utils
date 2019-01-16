@@ -28,8 +28,8 @@ public struct OrderedDictionary<Tk: Hashable, Tv> {
             if let newValue = newValue {
                 self.values[key] = newValue
             } else {
-                self.values.removeValueForKey(key)
-                self.keys.removeAtIndex(index)
+                self.values.removeValue(forKey: key)
+                self.keys.remove(at: index)
             }
         }
     }
@@ -40,7 +40,7 @@ public struct OrderedDictionary<Tk: Hashable, Tv> {
         }
         set(newValue) {
             if newValue == nil {
-                self.values.removeValueForKey(key)
+                self.values.removeValue(forKey: key)
                 self.keys = self.keys.filter {$0 != key}
             }
             
@@ -53,8 +53,8 @@ public struct OrderedDictionary<Tk: Hashable, Tv> {
     
     public var description: String {
         var result = "{\n"
-        for var i = 0; i < self.count; i++ {
-            result += "[\(i)]: \(self.keys[i]) => \(self[i])\n"
+        for i in 0..<self.count {
+            result += "[\(i)]: \(self.keys[i]) => \(String(describing: self[i]))\n"
         }
         result += "}"
         return result
